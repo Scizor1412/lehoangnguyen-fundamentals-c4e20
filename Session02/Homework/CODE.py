@@ -18,6 +18,7 @@ for i in range (n):
 print ("")
 #hethangdau
 for j in range (n-2):
+    
     print ("* ", end="")
     for i in range (n//2 + n -1):
         print ("  ", end="")
@@ -34,7 +35,7 @@ for j in range (n-2):
     for i in range (n//2):
         print ("  ", end="")
     if j == (n//2-1):
-        for k in range (n):
+        for k in range (n-(n//3)):
             print ("* ", end ="")
     else:
         print ("* ", end="")
