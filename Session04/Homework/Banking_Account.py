@@ -1,6 +1,5 @@
 balance = input("Enter your balance: ")
 outstanding = list(balance)
-print (outstanding)
 while outstanding[0] == "0":
     del outstanding[0]
 for i in range (len(outstanding)-3, 0, -3):
