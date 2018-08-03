@@ -27,6 +27,8 @@ player = {"x" : 1, "y" : 1}
 loop = True
 
 while loop:
+
+#Ve hinh
     for y in range (map_size["size_y"]):
         for x in range (map_size["size_x"]):
 
@@ -60,11 +62,21 @@ while loop:
             else:
                 print ("- ", end=" ")
         print ("")
-
+#Het ve hinh
+#win
+    win = True
+    for box in boxes:
+        if box not in destinations:
+            win = False
+    if win:
+        print ("You win!!!")
+        break
+#Het win
+#move
+    move = input ("Your move? ")
     dx = 0
     dy = 0
 
-    move = input ("Your move? ")
     if move.lower() == "w":
         dy = -1
     elif move.lower() == "d":
@@ -75,31 +87,39 @@ while loop:
         dy = 1
     else:
         print ("Shit!!!")
-
-    move_player = False
-    move_box = False
-    for box in boxes:
-        for obs in obstacles:
-            if 0 <= player["x"] + dx <= map_size["size_x"]-1 and 0 <= player["y"] + dy <= map_size["size_y"]-1:
-                
-                if player["x"] + dx == box["x"] and player["y"] + dy == box["y"]:
-                    if 0 <= box["x"] + dx <= map_size["size_x"]-1 and 0 <= box["y"] + dy <= map_size["size_y"]-1:
-                        if box["x"] + dx != obs["x"] and box["y"] + dy != obs["y"]:
-                            if box["x"] + dx != box["x"] and box["y"] + dy != box["y"]:
-                                move_player=True
-                                move_box=True
-                elif player["x"] + dx != obs["x"] and player["y"] + dy != obs["y"]:
-                    move_player=True
-                    
-    if move_player:
-        player["y"] += dy
+#het move
+#lap
+    if 0 <= player["x"] + dx < map_size["size_x"] and 0 <= player["y"] + dy < map_size["size_y"]:
         player["x"] += dx
-    for box in boxes:
-        if move_box:
-            box["y"] += dy
-            box["x"] += dx
-        if box not in destinations:
-            continue
-        else:
-            print ("You win!!!")
-            break
+        player["y"] += dy
+        for box in boxes:
+            for obs in obstacles:
+                if player["x"] == obs["x"] and player["y"] == obs["y"]:
+                    print ("Invalid move!!!")
+                    player["x"] -= dx
+                    player["y"] -= dy
+                elif player["x"] == box["x"] and player["y"] == box["y"]:
+
+                    if 0<= box["x"] + dx < map_size["size_x"] and 0 <= box["y"] + dy < map_size["size_y"]:
+                        box["x"] += dx
+                        box["y"] += dy
+                        duplicate = False
+                        for i in range (len(boxes)):
+                            for j in range (len(boxes)):
+                                if boxes[i] == boxes[j] and i != j:
+                                    duplicate = True
+
+                        if duplicate:
+                            print ("Invalid move!!!")
+                            player["x"] -= dx
+                            player["y"] -= dy
+                            box["x"] -= dx
+                            box["y"] -= dy
+                            
+                        elif box["x"] == obs["x"] and box["y"]== obs["y"]:
+                            print ("Invalid move!!!")
+                            player["x"] -= dx
+                            player["y"] -= dy
+                            box["x"] -= dx
+                            box["y"] -= dy
+                        break
