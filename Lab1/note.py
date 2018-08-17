@@ -1,3 +1,0 @@
-#gmail
-#database
-#malplotlib
