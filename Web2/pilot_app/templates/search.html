@@ -16,9 +16,10 @@
             {% else %}
             <img src="../static/image/female-profile.jpg" alt="">
             {% endif %}
-            <p>Teen: {{ service.name }}</p>
+            <p>Tên: {{ service.name }}</p>
             <p>Năm sinh: {{  service.yob }}</p>
             <p>Chieu cao: {{ service.height }} cm</p>
+            <a href="{{ url_for('detail', id = service.id) }}">Tìm hiểu thêm</a>
             <hr>
         </div>
     {% endfor %}

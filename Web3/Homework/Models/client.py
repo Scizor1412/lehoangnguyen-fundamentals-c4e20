@@ -1,14 +1,14 @@
 from mongoengine import *
 
-class Service(Document):
-    #Document là từ khóa cố định, Service là tên biến, đặt thế nào cũng được
+class Client(Document):
     name = StringField()
     yob = IntField()
-    gender = IntField()
-    height = IntField()
+    job = StringField()
     phone = StringField()
+    company = StringField()
+    height = IntField()
     address = StringField()
     status = BooleanField()
-    description = StringField()
+    description = ListField()
     image = ImageField()
     measurements = ListField()
