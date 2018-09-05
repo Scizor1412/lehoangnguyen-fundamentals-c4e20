@@ -169,6 +169,18 @@ def order(order_id):
     )
     new_order.save()
     return "Đã gửi yêu cầu"
+
+@app.route('/orderlist')
+def orderlist():
+    orders = Order.objects()
+    return render_template('order.html', orders = orders)
+
+@app.route('/update_order/<update_order_id>')
+def update_order(update_order_id):
+    order = Order.objects.with_id(update_order_id)
+    order.update(set__is_accepted = True)
+    return "Yêu cầu của bạn đã được xử lý"
+
 if __name__ == '__main__':
   app.run(debug=True)
  
