@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mùa đông không lạnh</title>
+</head>
+<body>
+    <h2>Order List</h2>
+    <table border = "1px" align = "Center" style = "border-collapse: collapse">
+        <tr>
+        <thead>
+            <th>STT</th>
+            <th>User</th>
+            <th>Service</th>
+            <th>Order Time</th>
+            <th></th>
+        </tr>
+        </thead>     
+        <tbody>
+            {% for order in orders %}
+            {% if order.is_accepted == False %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ order.user_id.username }}</td>
+                <td>{{ order.service_id.name }}</td>
+                <td>{{ order.time }}</td>
+                <td>
+                <a href="{{ url_for('update_order', update_order_id = order.id) }}">Phê duyệt</a>
+                </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

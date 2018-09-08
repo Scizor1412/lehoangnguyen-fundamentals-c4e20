@@ -10,5 +10,5 @@ class Service(Document):
     address = StringField()
     status = BooleanField()
     description = StringField()
-    image = ImageField()
+    image = StringField()
     measurements = ListField()

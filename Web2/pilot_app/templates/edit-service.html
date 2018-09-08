@@ -7,7 +7,8 @@
     <title>Mùa đông không lạnh</title>
 </head>
 <body>
-    <form method = "POST"></form>
+    <h1>Edit service</h1>
+    <form method = "POST">
         <label>Name</label>
         <input type="text" name="name" value = "{{ service.name }}">
         <br>
@@ -20,7 +21,7 @@
         <input type="text" name ="phone" value = "{{ service.phone }}">
         <br>
 
-        {% if gender == 0 %}
+        {% if service.gender == 0 %}
         <label >Gender</label>
         <input type="radio" name ="gender" value="Male">Male <br>
         <input type="radio" name = "gender" value = "Female" checked>Female <br>
