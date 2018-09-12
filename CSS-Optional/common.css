@@ -1,0 +1,102 @@
+.body{
+    width: 100%;
+    height: 1920px;
+    align-items: center;
+    margin: 0px;
+    justify-content: space-between;
+}
+
+.menu{
+    justify-content: space-between;
+    background-color: rgb(200, 200, 200);
+    width: 100%;
+    height: 50px;
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+
+.logo{
+    background-image: url(CSS-Optional/images/logo.png);
+    background-size: cover;
+    width: 89px;
+    height:50px;
+    margin: 0 10px;
+}
+
+.menu-opt{
+    line-height: 50px;
+    color: grey;
+    margin: 0 12px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.main-page{
+    width: 80%;
+    margin: 0 10%;
+    height: 85%
+}
+
+.main-page-1{
+    height: 35%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.main-page-1-1{
+    width: 70%;
+    height: 100%;
+    background-image: url(CSS-Optional/images/0.jpg);
+    background-size: cover;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.main-page-1-2{
+    width: 25%;
+    height: 100%;
+}
+
+.main-page-2{
+    height: 60%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.icon{
+    width: 14px;
+    height: 14px;
+    margin-right: 20px;
+    opacity: 0.5;
+}
+
+.main-page-2-1{
+    width: 70%;
+    height: 100%;
+}
+
+.image{
+    width: 180px;
+    height:180px;
+    margin-bottom: 7px;
+}
+
+.content{
+    width: 180px;
+    height:250px;
+}
+
+.content-box{
+    width: 100%;
+    flex-flow:wrap; 
+    justify-content:space-between;
+}
+
+.footer{
+    background-color: rgb(168, 168, 168);
+    width: 100%;
+    height: 12%;
+}

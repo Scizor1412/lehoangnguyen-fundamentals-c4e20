@@ -2,20 +2,18 @@
     background-color: blue;
 }
 
-.bg-powderblue{
-    background-color: powderblue;
+.bg-lightblue{
+    background-color: lightblue;
 }
 
-.bg-red{
-    background-color: lightcoral;
+.bg-logo{
+    background-image: url(Fullpage/images/page-logo.png);
+    background-size: cover;
 }
 
 .bg-lightgreen{
-    background-color: lightgreen;
-}
-
-.bg-green{
-    background-color: green;
+    background-image: url(Fullpage/images/header.jpg);
+    background-size: cover;
 }
 
 .bg-black{
@@ -38,8 +36,27 @@
     background-color: brown;
 }
 
-.h-1800px{
-    height: 1800px;
+.bg-cookbook{
+    background-image: url(Fullpage/images/cookbooks-blog.jpg);
+    background-size: cover;
+}
+
+.bg-dinner-blog{
+    background-image: url(Fullpage/images/dinner-blog.jpg);
+    background-size: cover;
+}
+
+.bg-potato{
+    background-image: url(Fullpage/images/potato.jpg);
+    background-size: cover;
+}
+
+.bg-pinterest{
+    background-image: url(Fullpage/images/pinterest.jpg);
+    background-size: cover;
+}
+.h-1000px{
+    height: 1000px;
 }
 
 .h-200px{
@@ -60,7 +77,7 @@
     width: 15%;
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 90%;
 }
 
@@ -77,7 +94,7 @@
 .row{
     display: flex;
     justify-content: space-between;
-    width: 83%;
+    width: 79%;
     flex-flow: column
 }
 
@@ -96,8 +113,8 @@
     width: 40%;
 }
 
-.h-10{
-    height: 10%;
+.h-5{
+    height: 5%;
 }
 
 .h-20{
@@ -142,8 +159,8 @@
     margin: 10px 0;
 }
 
-.w-24{
-    width: 24%;
+.w-25{
+    width: 25%;
 }
 
 .row1-2{
@@ -151,6 +168,7 @@
     width: 100%;
     flex-flow: row;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .w-20{
@@ -160,6 +178,163 @@
 .row1-1{
     display: flex;
     flex-flow: column;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: center;
+}
+
+.h-14{
+    height: 14%;
+}
+
+.h-22{
+    height: 22%;
+}
+
+.w-80{
+    width: 80%;
+}
+
+.m-10{
+    margin: 0 10%;
+}
+
+.head3{
+    color: blue;
+    margin: 20px 0 0 10px;
+    font-size: 23px;
+}
+
+.text{
+    color: blue;
+    margin: 10px 0 0 10px;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.white-text{
+    color: white;
+}
+
+.text-200{
+    font-size: 16px;
+    margin: 10px 0 0 10px;
+}
+
+.text-150{
+    font-size:13px;
+    margin: 10px 0 0 10px;
+}
+
+.email{
+    display: flex;
+    align-self: center;
+    height: 50%;
+}
+
+.h-50{
+    height: 50%;
+}
+
+.h-42{
+    height: 40%;
+}
+
+.font-lobster{
+    font-family: 'Lobster', cursive;
+    margin-left: 20px;
+    color: powderblue;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.m-bottom-40{
+    margin-bottom: 40%;
+}
+
+.h-16{
+    height: 16%;
+}
+
+.font-arvo{
+    text-transform: uppercase;
+    font-family: 'Arvo', serif;
+}
+
+.m-left-15px{
+    margin-left: 15px;
+}
+
+.font-dancing{
+    font-family: 'Dancing Script', cursive;
+    font-size: 12px;
+    line-height: 20px;
+    color: powderblue;
+}
+
+.w-h-20px{
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+.table-a{
+    border-width: 1px;
+    border-color:rgb(175, 175, 175);
+    border-style: solid;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.m-2px{
+    margin-right: 2px; 
+}
+
+.m-img-5px{
+    margin: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(245, 245, 245);
+}
+
+.head-row-3{
+    color: blue;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-row-3{
+    color: grey;
+    margin-top: 12px;
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: grey;
+}
+
+.m-20px{
+    margin: 20px;
+}
+
+.m-right-3px{
+    margin-right:3px;
+}
+
+.line-h-16px{
+    line-height: 16px;
+}
+
+.line-h-32px{
+    line-height: 32px;
+}
+
+.justify-self{
+    justify-self: center;
+}
+
+.justify-items{
+    justify-items: flex-start;
 }
