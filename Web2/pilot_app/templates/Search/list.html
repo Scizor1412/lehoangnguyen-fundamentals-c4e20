@@ -1,0 +1,23 @@
+<h1 class="text-light text-center">Search page</h1>
+<a href="{{ url_for('index') }}" class="ml-5 btn btn-dark">Ve trang chu</a>
+<div class="d-flex flex-wrap justify-content-around container">
+    {% for service in all_service %}
+        <div class="bg-transparent my-5">
+            <div class="card m-1 border rounded" style="width: 20rem">
+                <div class="card mt-1 mx-1 border rounded">
+                    {% if service.gender == 1 %}
+                    <img class="card-img-top mb-4 image" src="../../static/image/male-profile.jpg" alt="Card image cap">
+                    {% else %}
+                    <img class="card-img-top mb-4 image" src="../../static/image/female-profile.jpg" alt="Card image cap">
+                    {% endif %}
+                </div>
+            </div>
+            <div class="card-body rounded border mb-1 mx-1 bg-light">
+                <p>Tên: {{ service.name }}</p>
+                <p>Năm sinh: {{  service.yob }}</p>
+                <p>Chiều cao: {{ service.height }} cm</p>
+            </div>
+            <div><a href="{{ url_for('detail', id= service.id) }}" class="d-flex justify-content-center btn btn-primary mb-1 mx-1">Tìm hiểu thêm</a></div>
+        </div>
+    {% endfor %}
+</div>

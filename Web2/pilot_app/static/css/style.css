@@ -40,3 +40,17 @@
 .opacity-05{
     opacity: 0.5;
 }
+
+.bg-grey{
+    background-color: gray;
+}
+
+.bg-night{
+    background-image: url(../image/night.jpg);
+    background-size: contain
+}
+
+.image{
+    height: 310px;
+    width: 310px;
+}
