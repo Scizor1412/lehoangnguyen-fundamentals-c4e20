@@ -1,0 +1,42 @@
+.font-lobster{
+    font-family: 'Lobster', cursive;
+}
+
+.img-cap1{
+    bottom: 50%;
+    left: 15%;
+}
+
+.img-cap2{
+    bottom: 50%;
+    right: 15%;
+}
+
+.font-size-20px{
+    font-size: 20px;
+}
+
+.max-height-18341px{
+    max-height: 183.41px;
+}
+
+.bg-star{
+    background-image: url(../image/night.jpg);
+    height: 650px;
+    background-size: contain;
+}
+
+.voting-img{
+    height: 200px;
+    width: 200px;
+}
+
+.img-box{
+    background-color: white;
+    height: 210px;
+    width: 210px;
+}
+
+.opacity-05{
+    opacity: 0.5;
+}
